@@ -1,0 +1,3 @@
+wagtail
+gunicorn
+psycopg2-binary

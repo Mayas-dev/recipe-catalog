@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+</head>
+
+<body>
+
+    <h1>{{ page.title }}</h1>
+
+    {% if page.featured_image %}
+        <img src="{{ page.featured_image.file.url }}"
+             alt="{{ page.title }}"
+             width="400">
+    {% endif %}
+
+    <p>
+        <strong>Description:</strong>
+        {{ page.description }}
+    </p>
+
+    <p>
+        <strong>Origin:</strong>
+        {{ page.origin }}
+    </p>
+
+    <p>
+        <strong>Calories:</strong>
+        {{ page.calories }}
+    </p>
+
+    <p>
+        <strong>Prep Time:</strong>
+        {{ page.prep_time }} minutes
+    </p>
+
+    <p>
+        <strong>Cook Time:</strong>
+        {{ page.cook_time }} minutes
+    </p>
+
+    <p>
+        <strong>Servings:</strong>
+        {{ page.servings }}
+    </p>
+
+    <h2>Ingredients</h2>
+    {{ page.ingredients|richtext }}
+
+    <h2>Method</h2>
+    {{ page.method|richtext }}
+
+</body>
+</html>
